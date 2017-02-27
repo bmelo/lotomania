@@ -50,7 +50,7 @@ class appWindow:
        self.jResultado.exibe()
 
    def sair(self,*args):
-       exit()
+       sys.exit()
 
    def sobre(self,*args):
        self.jSobre.exibe()

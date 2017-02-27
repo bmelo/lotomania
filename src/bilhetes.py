@@ -112,11 +112,11 @@ class jBilhetes:
 
    def corrigeTNum(self):
        self.tNum.set_label("( "+str(self.bilhete.getNum())+" )")
-       self.tNum.set_has_tooltip(True)
+       #self.tNum.set_has_tooltip(True)
 
    def escondeTNum(self):
        self.tNum.set_label("")
-       self.tNum.set_has_tooltip(False)
+       #self.tNum.set_has_tooltip(False)
 
    # Callbacks ---------------------------------------------------------------
 

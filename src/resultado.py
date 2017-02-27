@@ -41,7 +41,7 @@ class jResultado:
       for x in range(0,100):
 	      self.chks.append(self.arvoreDeWidgets.get_widget('ck'+str(x).rjust(2,'0')))
       self.lista = self.arvoreDeWidgets.get_widget('lista')
-      self.itensLista = self.lista.get_model()
+      #self.itensLista = self.lista.get_model()
       self.limpar = self.arvoreDeWidgets.get_widget('bLimpar')
       self.salvar = self.arvoreDeWidgets.get_widget('bSalvar')
       self.tNum = self.arvoreDeWidgets.get_widget('tNum')
@@ -63,23 +63,24 @@ class jResultado:
           self.bilhete = Bilhete()
 
    def exibe(self):
-       self.itensLista.clear()
-       self.itensLista.append([str("VAZIO")])
+       #self.itensLista.clear()
+       #self.itensLista.append([str("VAZIO")])
        #self.lista.items.add("TESTE")
 #       self.lista.set_range()
 #       self.alteraResultado(self.lista)
        self.janela.show_all()
+       self.salvar.hide()
 
    def reabre(self, widget=None):
        self.carregaGlade()
 
    def corrigeTNum(self):
        self.tNum.set_label("( "+str(self.resultado.getNum())+" )")
-       self.tNum.set_has_tooltip(True)
+       #self.tNum.set_has_tooltip(True)
 
    def escondeTNum(self):
        self.tNum.set_label("")
-       self.tNum.set_has_tooltip(False)       
+       #self.tNum.set_has_tooltip(False)       
 
    # Callbacks ---------------------------------------------------------------
 

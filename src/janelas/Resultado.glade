@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Thu Apr  9 01:12:47 2009 -->
+<!--Generated with glade3 3.4.3 on Fri Apr 17 02:46:13 2009 -->
 <glade-interface>
   <widget class="GtkWindow" id="jAdicionar">
     <property name="title" translatable="yes">Bilhetes</property>
@@ -49,7 +49,6 @@
                         </child>
                         <child>
                           <widget class="GtkAspectFrame" id="aspectframe5">
-                            <property name="visible">True</property>
                             <property name="label_xalign">0</property>
                             <property name="shadow_type">GTK_SHADOW_NONE</property>
                             <property name="ratio">2.7000000476837158</property>
@@ -1885,63 +1884,39 @@
             <child>
               <widget class="GtkHButtonBox" id="hbuttonbox2">
                 <property name="visible">True</property>
-                <property name="spacing">10</property>
-                <property name="layout_style">GTK_BUTTONBOX_SPREAD</property>
+                <property name="spacing">20</property>
+                <property name="layout_style">GTK_BUTTONBOX_EDGE</property>
                 <child>
-                  <widget class="GtkAspectFrame" id="aspectframe6">
+                  <widget class="GtkAspectFrame" id="">
                     <property name="visible">True</property>
                     <property name="label_xalign">0</property>
                     <property name="shadow_type">GTK_SHADOW_NONE</property>
+                    <property name="ratio">2.7000000476837158</property>
+                    <property name="obey_child">False</property>
                     <child>
-                      <widget class="GtkHBox" id="hbox1">
+                      <widget class="GtkButton" id="bRelatorio">
                         <property name="visible">True</property>
-                        <child>
-                          <widget class="GtkLabel" id="rotulo">
-                            <property name="visible">True</property>
-                            <property name="label" translatable="yes">Número do Bilhete: </property>
-                            <property name="justify">GTK_JUSTIFY_RIGHT</property>
-                          </widget>
-                        </child>
-                        <child>
-                          <widget class="GtkComboBox" id="lista">
-                            <property name="visible">True</property>
-                            <property name="wrap_width">1</property>
-                            <property name="items" translatable="yes" comments="teste">- - - -</property>
-                            <signal name="changed" handler="alteraResultado"/>
-                          </widget>
-                          <packing>
-                            <property name="position">1</property>
-                          </packing>
-                        </child>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="label" translatable="yes">Relatório</property>
+                        <property name="response_id">0</property>
+                        <signal name="clicked" handler="exibeRelatorio"/>
                       </widget>
                     </child>
                   </widget>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">False</property>
-                  </packing>
                 </child>
                 <child>
                   <widget class="GtkAspectFrame" id="aspectframe4">
                     <property name="visible">True</property>
                     <property name="label_xalign">0.5</property>
                     <property name="shadow_type">GTK_SHADOW_NONE</property>
-                    <property name="ratio">5</property>
+                    <property name="ratio">2.7000000476837158</property>
+                    <property name="obey_child">False</property>
                     <child>
                       <widget class="GtkHBox" id="hbox3">
                         <property name="visible">True</property>
                         <property name="spacing">77</property>
                         <property name="homogeneous">True</property>
-                        <child>
-                          <widget class="GtkButton" id="bSalvar1">
-                            <property name="visible">True</property>
-                            <property name="can_focus">True</property>
-                            <property name="receives_default">True</property>
-                            <property name="label" translatable="yes">Relatório</property>
-                            <property name="response_id">0</property>
-                            <signal name="clicked" handler="exibeRelatorio"/>
-                          </widget>
-                        </child>
                         <child>
                           <widget class="GtkButton" id="bSair">
                             <property name="visible">True</property>
@@ -1952,9 +1927,6 @@
                             <property name="response_id">0</property>
                             <signal name="clicked" handler="bt_sair"/>
                           </widget>
-                          <packing>
-                            <property name="position">1</property>
-                          </packing>
                         </child>
                       </widget>
                     </child>
@@ -1966,7 +1938,7 @@
               </widget>
               <packing>
                 <property name="expand">False</property>
-                <property name="padding">10</property>
+                <property name="padding">6</property>
                 <property name="position">2</property>
               </packing>
             </child>
